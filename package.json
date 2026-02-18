@@ -1,0 +1,12 @@
+{
+  "name": "medic",
+  "version": "1.0.0",
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
+  "scripts": {
+    "build": "npm install --prefix backend && npx --prefix backend prisma generate && npx --prefix backend prisma migrate deploy",
+    "start": "node backend/src/app.js"
+  }
+}
