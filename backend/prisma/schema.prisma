@@ -1,5 +1,5 @@
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -16,8 +16,6 @@ model User {
   googleId           String?              @unique
   avatar             String?
   isProfileComplete  Boolean              @default(false)
-  pharmacyName       String?
-  licenceUrl         String?
   prescriptions      Prescription[]
   savedPrescriptions SavedPrescription[]
   createdAt          DateTime             @default(now())
